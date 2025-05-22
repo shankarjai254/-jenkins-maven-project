@@ -33,7 +33,8 @@ pipeline {
 
         stage('SonarQube Analysis') {
             environment {
-                // Add SonarQube environment variables here if needed
+                SONAR_TOKEN = credentials('squ_6a09e137c7171ffc02064445dd3b034fa9dab4e3')
+                SONAR_HOST_URL = 'http://13.201.180.176:9000/'
             }
             steps {
                 withSonarQubeEnv("${SONARQUBE_ENV}") {
