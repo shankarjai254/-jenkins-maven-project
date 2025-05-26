@@ -32,7 +32,7 @@ pipeline {
         stage('SonarQube Analysis') {
     environment {
         SONAR_TOKEN = credentials('adminsonar')
-        SONAR_HOST_URL = 'http://3.109.138.31:9000/'
+        SONAR_HOST_URL = 'http://13.203.66.197:9000/'
     }
     steps {
         sh '''
